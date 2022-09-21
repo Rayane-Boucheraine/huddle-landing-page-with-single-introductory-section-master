@@ -1,0 +1,140 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+    --transition: .3s;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/bg-desktop.svg") ,linear-gradient(var(--Violet), var(--Violet));
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.parent {
+    padding: 0 70px;
+}
+.logo {
+    width: 170px;
+    padding: 30px 0;
+}
+.content {
+    margin-top: 15px;
+    font-size: 29px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.image{
+    flex-basis: 55%;
+}
+.image img {
+    max-width: 670px;
+    max-height: 460px;
+}
+.text {
+    flex-basis: 42%;
+}
+.text h2 {
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.text p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+.text button {
+    padding: 12px 50px;
+    border-radius: 25px;
+    border: none;
+    color: var(--Violet);
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(128, 128, 128, 0.781);
+    transition: var(--transition);
+}
+.text button:hover {
+    background-color: var(--SoftMagenta);
+    color: white;
+}
+footer {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+}
+footer ul {
+    display: flex;
+}
+footer ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+}
+footer ul li a {
+    color: white;
+    transition: var(--transition);
+}
+footer ul li:hover {
+    border-color: var(--SoftMagenta);
+}
+footer ul li:hover a{
+    color: var(--SoftMagenta);
+}
+@media (max-width: 767px) {
+    body {
+        background-image: url("../images/bg-mobile.svg") ,linear-gradient(var(--Violet), var(--Violet));
+    }
+    .parent {
+        padding: 0 30px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .image {
+        margin-top: 15px;
+        flex-basis: 100%;
+    }
+    .image img {
+        width: 100%;
+    }
+    .text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .text h2 {
+        margin-top: 30px;
+        font-size: 26px;
+    }
+    .text p {
+        font-size: 16.5px;
+    }
+    .text button {
+        padding: 12px 70px;
+    }
+    footer {
+        left: 50%;
+        right: 40px;
+        bottom: 30px;
+        transform: translateX(-50%);
+    }
+}
